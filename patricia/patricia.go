@@ -106,6 +106,10 @@ func (trie *Trie) Set(key Prefix, item Item) {
 	trie.put(key, item, true)
 }
 
+func (trie *Trie) FindSubtree(prefix Prefix) (parent *Trie, root *Trie, found bool, leftover Prefix) {
+	return trie.findSubtree(prefix)
+}
+
 // Get returns the item located at key.
 //
 // This method is a bit dangerous, because Get can as well end up in an internal
