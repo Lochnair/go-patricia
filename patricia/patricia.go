@@ -93,6 +93,10 @@ func (trie *Trie) DumpTrie() {
 	fmt.Println(trie.dump())
 }
 
+func (trie *Trie) Prefix() Prefix {
+	return trie.prefix
+}
+
 // Item returns the item stored in the root of this trie.
 func (trie *Trie) Item() Item {
 	return trie.item
