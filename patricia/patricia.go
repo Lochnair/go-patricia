@@ -89,6 +89,10 @@ func (trie *Trie) Clone() *Trie {
 	}
 }
 
+func (trie *Trie) DumpTrie() {
+	fmt.Println(trie.dump())
+}
+
 // Item returns the item stored in the root of this trie.
 func (trie *Trie) Item() Item {
 	return trie.item
